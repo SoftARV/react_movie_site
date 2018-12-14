@@ -14,10 +14,18 @@ class MovieDetailPage extends Component {
     return (
       <div className="movie_detail_container">
         <div className="poster">
-          <img
-            src={"http://image.tmdb.org/t/p/w300/" + movie.poster_path}
-            alt="Poster"
-          />
+          <div className="movie_container">
+            {movie.poster_path === null ? (
+              <div className="poster">
+                <h1>{movie.title}</h1>
+              </div>
+            ) : (
+              <img
+                src={"http://image.tmdb.org/t/p/w300/" + movie.poster_path}
+                alt="Poster"
+              />
+            )}
+          </div>
         </div>
         <div className="information">
           <h1>{movie.title}</h1>
