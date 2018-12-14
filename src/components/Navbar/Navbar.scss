@@ -5,8 +5,18 @@
   flex-direction: column;
   position: fixed;
   z-index: 100;
-  background-image: linear-gradient(yellow, rgb(255, 208, 0));
+  background-image: linear-gradient(rgb(255, 239, 17), rgb(255, 208, 0));
   .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 200px;
+    .icon {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+    color: black;
+    text-decoration: none;
   }
 }

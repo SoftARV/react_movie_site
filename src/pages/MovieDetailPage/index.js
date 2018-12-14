@@ -21,8 +21,9 @@ class MovieDetailPage extends Component {
         </div>
         <div className="information">
           <h1>{movie.title}</h1>
-          <h2>{movie.vote_average}</h2>
+          <h2>Rating: {movie.vote_average}</h2>
           <h3>{movie.overview}</h3>
+          <h4>Release Date: {movie.release_date}</h4>
           <button className="like_button" onClick={this._likeMovie}>
             Like
           </button>
