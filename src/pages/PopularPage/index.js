@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 import { fetchPopularMovies } from "../../shared/actions/movie_actions";
 import MovieList from "../../components/MovieList";
@@ -14,7 +15,7 @@ class PopularPage extends Component {
   render() {
     let { movie } = this.props;
     return (
-      <div className="container">
+      <div className="popular_container">
         <MovieList movies={movie} />
       </div>
     );
@@ -25,7 +26,9 @@ function mapStateToProps({ movie }) {
   return { movie };
 }
 
-export default connect(
-  mapStateToProps,
-  { fetchPopularMovies }
-)(PopularPage);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { fetchPopularMovies }
+  )(PopularPage)
+);

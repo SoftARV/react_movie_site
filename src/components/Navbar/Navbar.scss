@@ -1,0 +1,12 @@
+.navbar_container {
+  width: 66px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  background-image: linear-gradient(yellow, rgb(255, 208, 0));
+  .button {
+    height: 200px;
+  }
+}
